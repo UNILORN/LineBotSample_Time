@@ -1,0 +1,10 @@
+version: "3"
+services:  
+  node:
+    image: node:12-alpine
+    volumes:
+      - .:/work
+    ports:
+      - "3000:3000"
+    working_dir: /work
+    command: /bin/sh -c "npm i && node server.js"
